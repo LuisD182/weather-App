@@ -39,9 +39,9 @@ const Weather = () => {
     const changePressure = () => {
         setIsHectoPascals(!isHectoPascals)
     }
-    const weatherDescription = weatherApp?.weather[0].description
+    // const weatherDescription = weatherApp?.weather[0].description
 
-    const weatherMain = weatherApp?.weather[0].main
+    // const weatherMain = weatherApp?.weather[0].main
     const backgroundStyle = () => {
         if (weatherMain === 'Haze'){
             return 'blue'
@@ -70,7 +70,7 @@ const Weather = () => {
             <h2>{weatherApp?.name}{', '}{weatherApp.sys?.country}</h2>
             <ul className='list'>
                 <li>Temp: {isCentigrades ? centigrades : farenheit} {isCentigrades ? '°C' : '°F'}</li>
-                <li> Weather: {weatherDescription}</li>
+                {/* <li> Weather: {weatherApp?.weather[0].description}</li> */}
                 <li>Wind speed: {weatherApp?.wind?.speed} m/s</li>
                 <li>Clouds: {weatherApp?.clouds?.all}% </li>
                 <li>Humidity: {weatherApp.main?.humidity} %</li>
