@@ -67,13 +67,13 @@ const Weather = () => {
     return (
         <div className='main-container'>
             <h1>Your current weather</h1>
-            <h2>{weatherApp?.name}{', '}{weatherApp.sys?.country}</h2>
+            <h2>{weatherApp?.name}{', '}{weatherApp?.sys?.country}</h2>
             <ul className='list'>
                 <li>Temp: {isCentigrades ? centigrades : farenheit} {isCentigrades ? '°C' : '°F'}</li>
                 {/* <li> Weather: {weatherApp?.weather[0].description}</li> */}
                 <li>Wind speed: {weatherApp?.wind?.speed} m/s</li>
                 <li>Clouds: {weatherApp?.clouds?.all}% </li>
-                <li>Humidity: {weatherApp.main?.humidity} %</li>
+                <li>Humidity: {weatherApp?.main?.humidity} %</li>
                 <li>Pressure: {isHectoPascals ? hectoPascals : mmHg} {isHectoPascals ? 'hPa' : 'mmHg'}</li>
             </ul>
             <div className='btn-container'>
